@@ -1,0 +1,12 @@
+%bar
+	_sys "clear"
+
+	_sys "gcc -lGL -lglfw -lvulkan -ldl -lpthread -lX11 -lXxf86vm -lXrandr -lXi -o build/game *.c */*.c */*/*.c"
+
+	_sys "glslc shaders/defshader.vert -o build/shaders/vert.spv"
+	_sys "glslc shaders/defshader.frag -o build/shaders/frag.spv"
+	
+	_sys "./build/game"
+
+	_stop
+!
